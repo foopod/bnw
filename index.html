@@ -25,17 +25,22 @@
         </div>
 
         <script>
+            var scrollPos;
             // Open the Modal
             function openModal(currentImage) {
+                scrollPos = window.pageYOffset || document.documentElement.scrollTop;
                 document.getElementById("currentImage").src = "";
                 document.getElementById("lightbox").style.display = "block";
                 document.getElementById("currentImage").src = currentImage;
+                document.getElementById("container").style.display = "none";
                 
             }
 
             // Close the Modal
             function closeModal() {
                 document.getElementById("lightbox").style.display = "none";
+                document.getElementById("container").style.display = "block";
+                document.documentElement.scrollTop = document.body.scrollTop = scrollPos;
             }
         </script>
     </body>

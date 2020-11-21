@@ -41,14 +41,18 @@ p{
     height: 120%;
     overflow: auto;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #currentImage{
     max-height: 70%;
     max-width: 80%;
-    display: block;
-    margin: auto;
-    margin-top: 2em;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .close{
