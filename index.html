@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <h1>jono.m2</h1>
+        <p class="tagline">A collection of Black and White Photographs.</p>
+        <div id="container">
+            <img src="assets/thumbs/Aotea.webp" onclick="openModal('assets/large/Aotea.webp')">
+            <p>Aotea Square. A summers day. Food vendors serve anything from Tteokbokki to Churros. Pigeons flock hoping to collect anything left behind.</p>
+            <img src="assets/thumbs/Dance.webp" onclick="openModal('assets/large/Dance.webp')">
+            <p>Pedestal lit dancers perform at Turama, Albert Park. A festival of immersive arts and performance.</p>
+            <img src="assets/thumbs/LittleMarcher.webp" onclick="openModal('assets/large/LittleMarcher.webp')">
+            <p>A boy marches down the streets of Auckland to fight for Animal Rights.</p>
+            <img src="assets/thumbs/NightMarkets.webp" onclick="openModal('assets/large/NightMarkets.webp')">
+            <p>A small girl enjoys her smoothie while taking in all the sights and sounds of the Auckland Night Markets.</p>
+            <img src="assets/thumbs/TheTallestGhosts.webp" onclick="openModal('assets/large/TheTallestGhosts.webp')">
+            <p>The Tallest Ghosts. The morning fog swirls around the trunks of pine trees. Now hundreds of years old, they are marked to be chopped down.</p>
+        </div>
+
+        <div id="lightbox" class="modal" style="display:none;">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <img id="currentImage"/>
+        </div>
+
+        <script>
+            // Open the Modal
+            function openModal(currentImage) {
+                document.getElementById("currentImage").src = "";
+                document.getElementById("lightbox").style.display = "block";
+                document.getElementById("currentImage").src = currentImage;
+                
+            }
+
+            // Close the Modal
+            function closeModal() {
+                document.getElementById("lightbox").style.display = "none";
+            }
+        </script>
+    </body>
+</html>
