@@ -21,7 +21,7 @@ h1{
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    width: 80%;
+    width: 100%;
     display: block;
     margin: auto;
     margin-top: 8em;
