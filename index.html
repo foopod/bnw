@@ -7,16 +7,31 @@
         <h1>jono.m2</h1>
         <p class="tagline">A collection of Black and White Photographs.</p>
         <div id="container">
-            <img src="assets/thumbs/Aotea.webp" onclick="openModal('assets/large/Aotea.webp')">
-            <p>Aotea Square. A summers day. Food vendors serve anything from Tteokbokki to Churros. Pigeons flock hoping to collect anything left behind.</p>
-            <img src="assets/thumbs/Dance.webp" onclick="openModal('assets/large/Dance.webp')">
-            <p>Pedestal lit dancers perform at Turama, Albert Park. A festival of immersive arts and performance.</p>
-            <img src="assets/thumbs/LittleMarcher.webp" onclick="openModal('assets/large/LittleMarcher.webp')">
-            <p>A boy marches down the streets of Auckland to fight for Animal Rights.</p>
-            <img src="assets/thumbs/NightMarkets.webp" onclick="openModal('assets/large/NightMarkets.webp')">
-            <p>A small girl enjoys her smoothie while taking in all the sights and sounds of the Auckland Night Markets.</p>
-            <img src="assets/thumbs/TheTallestGhosts.webp" onclick="openModal('assets/large/TheTallestGhosts.webp')">
-            <p>The Tallest Ghosts. The morning fog swirls around the trunks of pine trees. Now hundreds of years old, they are marked to be chopped down.</p>
+            <div id="page1">
+                <img src="assets/thumbs/TheTallestGhosts.webp" onclick="openModal('assets/large/TheTallestGhosts.webp')">
+                <p>The Tallest Ghosts. The morning fog swirls around the trunks of pine trees. Now hundreds of years old, they are marked to be chopped down.</p>
+                <img src="assets/thumbs/Couch.webp" onclick="openModal('assets/large/Couch.webp')">
+                <p>I don't know where this came from, but someone must have dragged it a long way for it to get here.</p>
+                <img src="assets/thumbs/Sunset.webp" onclick="openModal('assets/large/Sunset.webp')">
+                <p>The haze from the sear air becomes much more apparant at dusk. With the beach behind us the day is up and it is time to go home.</p>
+                <img src="assets/thumbs/WesternSprings.webp" onclick="openModal('assets/large/WesternSprings.webp')">
+                <p>A stranger sits on a bench relaxing after work. Her phone is away, but the music streams into her ears as the she gazes over the sunset.</p>
+                <a href="#" onclick='loadMore()'>Load More</a>
+            </div>
+            <div id="page2"  style="display:none">
+                <img src="assets/thumbs/CovidBench.webp" onclick="openModal('assets/large/CovidBench.webp')">
+                <p>I have added this to my list. I can't go to work, I can't see my friends and family. I can barely go outside. And now I can't sit down.</p>
+                <img src="assets/thumbs/Muriwai.webp" onclick="openModal('assets/large/Muriwai.webp')">
+                <p>The sun isn't even up and the Gannet Colony is already a hive of activity. Some are fishing for breakfast, others collecting grasses to build their nests.</p>
+                <img src="assets/thumbs/Aotea.webp" onclick="openModal('assets/large/Aotea.webp')">
+                <p>Aotea Square. A summers day. Food vendors serve anything from Tteokbokki to Churros. Pigeons flock hoping to collect anything left behind.</p>
+                <img src="assets/thumbs/Dance.webp" onclick="openModal('assets/large/Dance.webp')">
+                <p>Pedestal lit dancers perform at Turama, Albert Park. A festival of immersive arts and performance.</p>
+                <img src="assets/thumbs/LittleMarcher.webp" onclick="openModal('assets/large/LittleMarcher.webp')">
+                <p>A boy marches down the streets of Auckland to fight for Animal Rights.</p>
+                <img src="assets/thumbs/NightMarkets.webp" onclick="openModal('assets/large/NightMarkets.webp')">
+                <p>A small girl enjoys her smoothie while taking in all the sights and sounds of the Auckland Night Markets.</p>
+            </div>
         </div>
 
         <div id="lightbox" class="modal" style="display:none;">
@@ -26,6 +41,8 @@
 
         <script>
             var scrollPos;
+            var pageNumber = 1;
+
             // Open the Modal
             function openModal(currentImage) {
                 scrollPos = window.pageYOffset || document.documentElement.scrollTop;
@@ -41,6 +58,13 @@
                 document.getElementById("lightbox").style.display = "none";
                 document.getElementById("container").style.display = "block";
                 document.documentElement.scrollTop = document.body.scrollTop = scrollPos;
+            }
+
+            function loadMore(){
+                event.preventDefault();
+                var links = document.getElementById("page"+pageNumber).getElementsByTagName('a')[0].style.display  = 'none';
+                pageNumber += 1;
+                document.getElementById("page"+pageNumber).style.display = "block";
             }
         </script>
     </body>
