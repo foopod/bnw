@@ -101,3 +101,24 @@ form textarea{
 a{
     color:black;
 }
+
+.tabs{
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px black solid;
+    padding: 0px 12px;
+}
+
+.tab {
+    padding: 8px;
+    border: 1px black solid;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.selected , .selected a{ 
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
