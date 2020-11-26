@@ -110,14 +110,15 @@ a{
 }
 
 .tab {
-    padding: 5px 20px;
-    border: 1px black solid;
+    padding: 3px 20px;
+    border: 1px grey solid;
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .selected , .selected a{ 
+    border: 1px black solid;
     background-color: black;
     color: white;
     text-decoration: none;
