@@ -81,6 +81,15 @@ form input{
     border-radius: 0px;
 }
 
+form button{
+    border: 1px black solid;
+    background-color: white;
+    padding : 6px 20px;
+    margin: auto;
+    display: block;
+    color : black;
+}
+
 form textarea{
     width: 100%;
     padding: 5px;
