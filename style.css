@@ -19,9 +19,7 @@ h1{
 }
 
 #container img{
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+    image-rendering: optimizeQuality;
     width: 100%;
     display: block;
     margin: auto;
